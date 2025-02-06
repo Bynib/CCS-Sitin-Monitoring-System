@@ -19,3 +19,9 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@layer utilities {
+  .input {
+    @apply bg-transparent border-b focus:outline-none
+  }
+}
