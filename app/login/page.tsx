@@ -2,8 +2,11 @@ import Link from "next/link";
 import React from "react";
 import Image from "next/image";
 import Navbar from "@/components/navbar";
+import LoginForm from "@/components/loginform";
 
-const page = () => {
+const page = async () => {
+  
+
   return (
     <div className="h-screen w-screen overflow-hidden flex flex-col justify-center bg-gray-900 color">
       <Navbar />
@@ -13,20 +16,7 @@ const page = () => {
           LOGIN
         </h1>
         <div className="flex flex-col justify-center items-center w-full h-3/5">
-          <form className="form flex flex-col justify-center items-center gap-7 w-1/2">
-            <input
-              type="text"
-              placeholder="username"
-              className="input w-full"
-            />
-            <input
-              type="password"
-              placeholder="password"
-              className="input w-full"
-            />
-            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-5 rounded flex justify-center w-full">
-              Login
-            </button>
+          <LoginForm />
             <div className="flex flex-col gap-1 md:flex-row sm:flex-col">
               <h6 className="pt-4 text-sm">Don't have an account?</h6>
               <Link
@@ -36,7 +26,6 @@ const page = () => {
                 Register
               </Link>
             </div>
-          </form>
         </div>
       </div>
     </div>

@@ -1,7 +1,7 @@
 import React from 'react'
 import Navbar from '@/components/navbar'
 
-const page = ({params} : {params: {id: string}}) => {
+const page = ({params} : {params: {username: string}}) => {
   return (
     <>
       <div className="w-screen h-screen overflow-hidden flex justify-center items-center bg-gray-900">
@@ -9,7 +9,7 @@ const page = ({params} : {params: {id: string}}) => {
         <div className="flex flex-col justify-center text-center">
           <h1 className="text-5xl font-extrabold leading-relaxed text-purple-100">
             Welcome to <br />
-            <div className="text-yellow-300">CCS Sitin Monitoring System DASHBOARD student {params.id} :)</div>
+            <div className="text-yellow-300">CCS Sitin Monitoring System <br />DASHBOARD <br />{params.username} :)</div>
           </h1>
           <br />
           <p className="font-extralight italic text-purple-100">

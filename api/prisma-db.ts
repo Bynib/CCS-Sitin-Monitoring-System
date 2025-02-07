@@ -7,17 +7,19 @@ export async function getStudents() {
 }
 
 export async function addStudent(student: {
-    IDNo: number;
-    Lastname: string;
-    Firstname: string;
-    Midname: string;
-    Course: string;
-    YearLevel: number;
-    Email: string;
+    idno: number;
+    lastname: string;
+    firstname: string;
+    midname: string;
+    course: string;
+    yearlevel: number;
+    email: string;
     username: string;
     password: string;
-    createdAt: Date;
-    updatedAt: Date;
 }) {
     return await prisma.student.create({ data: student });
+}
+
+export async function getStudent(idno: number) {
+    return await prisma.student.findFirst({ where: { idno } });
 }
