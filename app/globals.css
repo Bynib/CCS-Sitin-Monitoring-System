@@ -22,6 +22,13 @@ body {
 
 @layer utilities {
   .input {
-    @apply bg-transparent border-b focus:outline-none
+    @apply bg-transparent border-b focus:outline-none text-purple-100
   }
+  .color {
+    @apply text-purple-100  
+  }
+}
+
+select option {
+  color: black;
 }

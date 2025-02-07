@@ -1,6 +1,7 @@
-import Navbar from "@/components/navbar";
+import React from 'react'
+import Navbar from '@/components/navbar'
 
-export default function Home() {
+const page = ({params} : {params: {id: string}}) => {
   return (
     <>
       <div className="w-screen h-screen overflow-hidden flex justify-center items-center bg-gray-900">
@@ -8,7 +9,7 @@ export default function Home() {
         <div className="flex flex-col justify-center text-center">
           <h1 className="text-5xl font-extrabold leading-relaxed text-purple-100">
             Welcome to <br />
-            <div className="text-yellow-300">CCS Sitin Monitoring System :)</div>
+            <div className="text-yellow-300">CCS Sitin Monitoring System DASHBOARD student {params.id} :)</div>
           </h1>
           <br />
           <p className="font-extralight italic text-purple-100">
@@ -18,5 +19,7 @@ export default function Home() {
         </div>
       </div>
     </>
-  );
+  )
 }
+
+export default page
